@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="header-css/header.css">
+	</head>
+	<body>
+		<div class="flex w-full">
+			<div class="body-content-right">
+				<header class="bg-white border-b md:px-8 px-4">
+					<div class="flex justify-between items-center w-full">
+						<form class="w-10/12 py-2.5 sm:block flex items-center">
+							<div class="sm:hidden mr-4">
+					            <button class="w-6 h-6"  onclick="sidebarmob()">
+					                <img src="header-images/menu-bars.png">
+					            </button>
+					        </div>
+							<div class="flex items-center  relative">
+								<img class="absolute left-0" src="header-images/search.png" />
+								<input class="text-sm font-normal leading-3 py-2.5 px-3 ml-6 w-full text-757575" type="text" name="search" placeholder="Search">
+							</div>
+						</form>
+						<div class="flex items-center py-4 border-l">
+							<button class="w-6 h-6 ml-5">
+								<img src="header-images/notification-bell.png" />
+							</button>
+							<button class="w-6 h-6 sm:ml-9 ml-5">
+								<img src="header-images/activity.png" />
+							</button>
+							<button class="w-6 h-6 sm:ml-9 ml-5">
+								<img src="header-images/profile.png" />
+							</button>
+						</div>
+					</div>
+				</header>
+			</div>
+		</div>
+		<script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            function sidebarmob() {
+                   let element = document.getElementById("sidebar-mob");
+                   element.classList.toggle("sidebar-mob-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hidesidebarmob() {
+                let element = document.getElementById("sidebar-mob");
+                 element.classList.remove("sidebar-mob-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+
+        </script>
+	</body>
+</html>

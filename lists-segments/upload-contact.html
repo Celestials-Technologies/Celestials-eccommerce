@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<script src="../css/tailwind-latest.min.css"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="css/header-css/header.css">
+		<link rel="stylesheet" href="css/sidebar-css/sidebar.css">
+	</head>
+	<body class="bg-[#b9b9bb]">
+		
+		<div class="w-full max-w-md mx-auto px-6 mt-16">
+			<div class="bg-white p-5 rounded-lg">
+				<div class="relative border border-dashed border-ryzeo-blue flex justify-center items-center sm:pt-16 pt-6 sm:pb-12 pb-6">
+					<div class="sm:px-20">
+						<div>
+							<img class="mx-auto" src="images/upload2.png">
+						</div>
+						<p class="text-sm font-medium leading-4 text-212121 mt-6 text-center">Drag and drop files to upload or</p>
+						<div class="px-0.5">
+							<button class="text-[13px] font-medium leading-4 text-white rounded flex items-center justify-center py-3 px-2 w-full mt-2.5 ryeo-blue-bg">
+								<img src="images/plus.png">
+								<span class="ml-3">Select files to upload</span>
+							</button>
+						</div>
+					</div>
+					<input class="absolute top-0 w-full h-full opacity-0 cursor-pointer" type="file" name="upload">
+				</div>
+				<p class="text-sm font-normal leading-4 text-757575 my-4">Single upload file should not be more than 10MB. Only the .xls, .xlsx file types are allowed</p>
+				<div>
+					<button type="Cancel" class="w-full border border-[#cfcfcf] py-1.5 flex justify-center items-center rounded text-[13px] font-medium leading-4 text-616161">Cancel</button>
+				</div>
+			</div>
+		</div>
+
+		<script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            function sidebarmob() {
+                   let element = document.getElementById("sidebar-mob");
+                   element.classList.toggle("sidebar-mob-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hidesidebarmob() {
+                let element = document.getElementById("sidebar-mob");
+                 element.classList.remove("sidebar-mob-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+			$('.tabs-btn').on('click', function(){
+  			$('.tabs-btn').removeClass('selected');
+    		$(this).addClass('selected');
+});
+        </script>
+        <script src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+.workflow-name-td {
+	min-width: 293px;
+}
+
+.actions-td {
+	min-width: 255px;
+}
+
+.minW-134 {
+	min-width: 134px;
+}
+
+.minW-121 {
+	min-width: 121px;
+}
+
+.minW-104 {
+	min-width: 104px;
+}
+
+.minW-124 {
+	min-width: 124px;
+}
+
+.minW-139 {
+	min-width: 139px;
+}
+
+.btn-boxShadow {
+	box-shadow: 0px 2px 5px rgba(64, 68, 82, 0.08), 0px 0px 0px 1px rgba(64, 68, 82, 0.16), 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.table-td-boxShadow {
+	box-shadow: inset 0px -1px 0px #EEEEEE;
+}

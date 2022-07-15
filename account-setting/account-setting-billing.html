@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<script src="../css/tailwind-latest.min.css"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="css/header-css/header.css">
+		<link rel="stylesheet" href="css/sidebar-css/sidebar.css">
+	</head>
+	<body>
+		<div class="flex w-full">
+			<div id="wrapper" onclick="hidesidebarmob()"></div>
+			<div id="sidebar-mob" class="h-screen lg-w-220 sm:w-16 bg-fafafa mob-sidebar boxshadow-eeeeee font-inter fixed overflow-auto">
+				<div class="px-5 py-2 border-b lg:block sm:hidden">
+					<div class="w-40 pl-0.5">
+						<img src="sidebar-images/logo.png" />
+					</div>
+				</div>
+				<div class="flex flex-col justify-between h-full px-2.5 pt-4 pb-6 bg-fafafa">
+					<div>
+						<form>
+							<div class="lg:border sm:border-0 border rounded lg:bg-white sm:bg-transparent bg-white flex justify-between items-center pl-3 pr-3.5 py-2 relative">
+								<img class="absolute left-3 w-3 h-3" src="sidebar-images/search.png" />
+								<input class="fs-13 font-normal leading-3 lg:block sm:hidden text-757575 ml-5 h-5 w-3/4 p-2" type="text" name="search" placeholder="Jump to">
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xs.png" />
+								</span>
+							</div>
+						</form>
+						<div class="border-b pb-2">
+							<a href="../dashboard-blast/index.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-6 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/box.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/box-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Dashboard</span>
+								</div>
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xd.png" />
+								</span>
+							</a>
+						</div>
+						<a href="../index.html" class="flex justify-between items-center rounded sidebar-dropdown py-2.5 px-3.5 mt-2.5 group focus:bg-[#3575d5]">
+							<div class="flex items-center">
+								<span>
+									<img class="group-focus:hidden" src="sidebar-images/union.png" />
+									<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/union-white.png" />
+								</span>
+								<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Campaigns</span>
+							</div>
+							<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+								<img class="mx-auto" src="sidebar-images/xd.png" />
+							</span>
+						</a>
+						<div class="hidden lg:block">
+							<a href="../campaign-blasts/index.html" class="flex justify-between items-center py-3 px-3.5 mt-2 group focus:bg-[#3575d5] rounded">
+								<div class="flex items-center">
+									<span class="w-4 h-4">
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 pl-3 sidebar-links group-focus:text-white">Configuration Edit</span>
+								</div>
+							</a>
+							<a href="../campaign-blasts/content-view.html" class="flex justify-between items-center py-3 px-3.5 group focus:bg-[#3575d5] rounded">
+								<div class="flex items-center">
+									<span class="w-4 h-4">
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 pl-3 sidebar-links group-focus:text-white">Configuration View</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="../workflow/index.html" class="flex justify-between items-center rounded py-3 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/share-black.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/share.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 lg:block sm:hidden pl-3 sidebar-links group-focus:text-white">WorkFlows</span>
+								</div>
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xf.png" />
+								</span>
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/mail.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/mail-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Email Templates</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/notification.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/notification-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Pop-Ups</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="../lists-segments/lists.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/target.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/target-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">List & Segments</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="../subscribers-profile/kamron-profile-form.html" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/user.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/user-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Profiles</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="#/" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 sidebar-items group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/cloud.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/cloud-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Integrations</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/rss.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/data-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Data Feeds</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div>
+						<div class="">
+							<a href="../account-setting/account-setting-profile-edit.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/setting.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/setting-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Settings</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/info.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/info-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Get Help</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="body-content-right">
+				<header class="bg-white border-b md:pl-8 pl-4">
+					<div class="flex justify-between items-center w-full">
+						<form class="w-8/12 sm:py-2.5 sm:block flex items-center">
+							<div class="sm:hidden mr-2">
+					            <button type="button" class="w-6 h-6"  onclick="sidebarmob()">
+					                <img src="sidebar-images/menu-bars.png">
+					            </button>
+					        </div>
+							<div class="flex items-center  relative">
+								<img class="absolute left-0" src="sidebar-images/search.png" />
+								<input class="text-sm font-normal leading-3 py-2.5 px-3 sm:ml-6 ml-1.5 w-full text-757575" type="text" name="search" placeholder="Search">
+							</div>
+						</form>
+						<div class="flex ">
+							<div class="flex items-center sm:py-2 py-1.5 px-4 border-l">
+								<button class="w-6 h-6">
+									<img src="sidebar-images/notification-bell.png" />
+								</button>
+							</div>
+							<button class="flex sm:py-2 py-1.5 pl-3 sm:pr-11 pr-3 bg-e7eed9">
+								<div class="flex items-center">
+									<div class="sm:w-12 w-8 sm:h-12 h-8 rounded-full">
+										<img src="images/profile.png" />
+									</div>
+									<div class="ml-3 sm:block hidden">
+										<div class="flex items-center mb-2">
+											<h4 class="text-base font-bold leading-3 text-left text-212121 mr-2">Abc Store</h4>
+											<span>
+												<img src="images/shopify.png" alt="Bag" />
+											</span>
+										</div>
+										<p class="text-base font-normal leading-3 text-212121">daniel.rist@gmail.com</p>
+									</div>
+								</div>
+								<div class="ml-8 w-3 pt-1.5 sm:block hidden">
+									<img class="" src="images/d-blasts-downarrow.png" />
+								</div>
+							</button>
+						</div>
+					</div>
+				</header>
+				<div class="md:px-6 px-3 pt-5 border-b font-inter">
+					<div class="md:px-1.5">
+						<div class="flex items-center">
+							<span class="w-6 h-6 mr-2.5">
+								<img class="w-full h-full" src="images/health.png" />
+							</span>
+							<h2 class="text-xl font-gilroyBold leading-5 text-212121">Account Settings</h2>
+						</div>
+						<div class="flex flex-wrap items-center pt-7">
+							<div>
+								<button class="text-sm font-medium leading-3 text-616161 sm:px-7 px-3 pt-4 pb-7 tabs-btn selected group flex items-center">
+									<img class="w-[18px] h-[18px] mr-2.5 block group-focus:hidden" src="images/hashtag.png">
+									<img class="w-[18px] h-[18px] mr-2.5 hidden group-focus:block" src="images/hashtag-blue.png">
+									Overview
+								</button>
+							</div>
+							<div class="-mb-1">
+								<button class="text-sm font-medium leading-3 text-616161 sm:px-7 px-3 pt-4 pb-7 tabs-btn group flex items-center">
+									<img class="w-[18px] h-[18px] mr-2.5 block group-focus:hidden" src="images/user.png">
+									<img class="w-[18px] h-[18px] mr-2.5 hidden group-focus:block" src="images/user-blue.png">
+									Users
+								</button>
+							</div>
+							<div class="-mb-1">
+								<button class="text-sm font-medium leading-3 text-616161 sm:px-7 px-3 pt-4 pb-7 tabs-btn group flex items-center">
+									<img class="w-[18px] h-[18px] mr-2.5 block group-focus:hidden" src="images/bill.png">
+									<img class="w-[18px] h-[18px] mr-2.5 hidden group-focus:block" src="images/bill-blue.png">
+									Billing
+								</button>
+							</div>
+							<div class="-mb-1">
+								<button class="text-sm font-medium leading-3 text-616161 sm:px-7 px-3 pt-4 pb-7 tabs-btn group flex items-center">
+									<img class="w-[18px] h-[18px] mr-2.5 block group-focus:hidden" src="images/shop-add.png">
+									<img class="w-[18px] h-[18px] mr-2.5 hidden group-focus:block" src="images/shop-add-blue.png">
+									Stores
+								</button>
+							</div>
+							<div class="-mb-1">
+								<button class="text-sm font-medium leading-3 text-616161 sm:px-7 px-3 pt-4 pb-7 tabs-btn group flex items-center">
+									<img class="w-[18px] h-[18px] mr-2.5 block group-focus:hidden" src="images/user-profile.png">
+									<img class="w-[18px] h-[18px] mr-2.5 hidden group-focus:block" src="images/user-profile-blue.png">
+									Profile
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="md:px-6 px-3 py-7 bg-f6f7f9 font-inter">
+					<div class="md:px-1.5">
+						<div class="mb-4">
+							<h2 class="sm:text-xl text-base font-gilroyBold leading-5 text-424242">Billing Information</h2>
+						</div>
+						<div class="sm:flex">
+							<div class="sm:w-6/12 w-full sm:pr-2.5 h-60 pb-2.5">
+								<div class="bg-white sm:pt-6 pt-4 h-full rounded-lg boxShadow">
+									<div class="sm:px-7 px-3">
+										<div class="flex justify-between items-center">
+											<div class="">
+												<div class="flex">
+													<span class="text-base font-gilroyBold leading-4 text-424242 mr-2.5">Basic Plan</span>
+													<span class="text-xs font-medium leading-3 text-[#ea7104] px-1.5 py-1 rounded-[10px] bg-[#f8eade]">monthly</span>
+												</div>
+												<p class="text-[13px] font-medium leading-3 text-424242 mt-2.5">02 Jan’ 22 – 01 Jan’ 23</p>
+											</div>
+											<h2 class="lg:text-3xl md:text-xl text-base font-gilroyBold leading-10 text-424242">$120</h2>
+										</div>
+										<div class="flex mt-12">
+											<div class="w-60 mr-2.5">
+												<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-757575 mb-3">total profiles</p>
+												<p class="text-[13px] font-medium leading-4 text-424242">100</p>
+											</div>
+											<div class="w-60 mr-2.5">
+												<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-757575 mb-3">Total Emails</p>
+												<p class="text-[13px] font-medium leading-4 text-424242">100</p>
+											</div>
+										</div>
+									</div>
+									<div class="py-3 rounded-b-lg sm:px-7 px-3 bg-[#edf4ff] mt-8">
+										<a href="#/" class="flex justify-end items-center text-[13px] font-medium leading-4 text-ryzeoBlue">
+											Upgrade Plan <img class="ml-2 mt-0.5" src="images/next-arrow.png" />
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="sm:w-6/12 w-full sm:pl-2.5 h-60 pb-2.5">
+								<div class="bg-white sm:pt-6 sm:pb-8 py-4 sm:px-7 px-3 h-full rounded-lg boxShadow">
+									<div class="flex justify-between items-center">
+										<h3 class="text-base font-gilroyBold leading-4 text-424242">Card Details</h3>
+										<a href="#/" class="flex justify-end items-center text-[13px] font-medium leading-4 text-ryzeoBlue">
+											Edit Card <img class="ml-2 mt-0.5" src="images/next-arrow.png" />
+										</a>
+									</div>
+									<div class="flex justify-between border border-bdbdbd rounded p-3 mt-12">
+										<div class="flex items-center">
+											<div class="w-12 h-7">
+												<img src="images/visa.png" alt="Card" />
+											</div>
+											<div class="ml-3">
+												<p class="text-[13px] font-medium leading-4 text-616161 mb-1.5">Visa ending in <span class="font-semibold">1234</span></p>
+												<p class="text-xs font-medium leading-4 text-757575">Daniel Rist</p>
+											</div>
+										</div>
+										<div>
+											<p class="text-sm font-semibold leading-5 text-757575 text-right">Expiry 02/2024</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="flex justify-between items-center mb-7 mt-12">
+							<h2 class="text-xl font-gilroyBold leading-5 text-424242">Address</h2>
+							<div class="flex items-center">
+								<button class="flex items-center text-[13px] font-medium leading-5 text-616161 py-2 mr-7">
+									Cancel
+								</button>
+								<button class="flex items-center text-[13px] font-medium leading-5 text-white rounded ryeo-blue-bg px-4 py-2.5">
+									Save
+								</button>
+							</div>
+						</div>
+						<div class="bg-white sm:pt-6 sm:pb-8 py-4 sm:px-7 px-3 rounded-lg boxShadow">
+							<form action="#/" class="sm:flex">
+								<div class="sm:w-6/12 w-full md:pr-4 pr-2">
+									<div>
+										<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-9e9e9e mb-3">street Name</p>
+										<input class="border border-9e9e9e h-11 p-4 text-[13px] font-medium leading-3 text-616161 rounded w-full" type="street Name" name="street name" placeholder="Placeholder (Optional)">
+									</div>
+									<div class="mt-8">
+										<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-9e9e9e mb-3">stae/province</p>
+										<div class="relative border border-9e9e9e rounded">
+											<select class="w-full rounded sm:py-2.5 py-1.5 sm:px-3.5 px-2 text-sm font-medium leading-5 text-616161">
+												<option value="Indiana">Indiana</option>
+											</select>
+											<img class="absolute top-5 right-4" src="images/down-arrow.png">
+										</div>
+									</div>
+									<div class="mt-8">
+										<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-9e9e9e mb-3">country</p>
+										<div class="relative border border-9e9e9e rounded">
+											<select class="w-full rounded sm:py-2.5 py-1.5 sm:px-3.5 px-2 text-sm font-medium leading-5 text-616161">
+												<option value="USA">USA</option>
+											</select>
+											<img class="absolute top-5 right-4" src="images/down-arrow.png">
+										</div>
+									</div>
+								</div>
+								<div class="sm:w-6/12 w-full sm:mt-0 mt-7 md:pl-4 pr-2">
+									<div>
+										<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-9e9e9e mb-3">CITY</p>
+										<input class="border border-9e9e9e h-11 p-4 text-[13px] font-medium leading-3 text-616161 rounded w-full" type="text" name="City" placeholder="Protland">
+									</div>
+									<div class="mt-8">
+										<p class="text-xs font-semibold leading-3 tracking-wide uppercase text-9e9e9e mb-3">zip-code</p>
+										<input class="border border-9e9e9e h-11 p-4 text-[13px] font-medium leading-3 text-616161 rounded w-full" type="number" name="zipcode" placeholder="47371">
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="flex justify-between items-center mt-12">
+							<h1 class="sm:text-xl text-base font-gilroyBold leading-5 md:w-32 text-424242 mr-2.5">Billing History</h1>
+							<div class="pl-2.5">
+								<button class="fs-13 font-medium leading-4 sm:h-11 h-8 font-inter flex items-center sm:py-3 py-1.5 xl:pl-4 lg:pl-2 md:pl-1 sm:pl-4 sm:pr-3 px-2 border rounded border-bdbdbd btn-boxShadow bg-white">
+									<img class="mr-2.5" src="images/filter.png" />
+									Filters
+								</button>
+							</div>
+						</div>
+						
+					  	<div class=" shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+					  		<div class="mt-6 flex flex-col">
+						    	<div class="-my-2 overflow-x-auto">
+						      		<div class="inline-block min-w-full py-2 align-middle">
+								        <div class="overflow-hidden ring-1 ring-black ring-opacity-5 rounded-t-lg">
+								          	<table class="min-w-full divide-y divide-gray-300 fs-13 font-medium text-616161">
+								            	<thead class="bg-gray-50">
+								              		<tr class="flex">
+										                <th scope="col" class="py-3 pl-3 pr-3 text-left fs-13 font-medium text-757575 w-[280px] min-w-[280px]">Invoice Number <img src="images/down-arrow.png" class="inline-block float-right" alt="arrow"></th>
+
+										                <th scope="col" class="py-3 pl-3 pr-3 text-left fs-13 font-medium text-757575 border-r-0 border-none w-[216px] min-w-[216px] flex justify-between items-center">Payment Status<img src="images/down-arrow.png" class="inline-block ml-2 float-right" alt="arrow"></th>
+
+										                <th scope="col" class="py-3 pl-3 pr-3 text-left fs-13 font-medium text-757575 border-r-0 border-none w-[216px] min-w-[216px] flex justify-between items-center">Billing Date <img src="images/down-arrow.png"  class="inline-block float-right" alt="arrow"></th>
+
+										                <th scope="col" class="py-3 pl-3 pr-3 text-left fs-13 font-medium text-757575 border-r-0 border-none w-[216px] min-w-[216px] flex justify-between items-center">Amount <img src="images/down-arrow.png"  class="inline-block float-right" alt="arrow"></th>
+
+										                <th scope="col" class="py-3 pl-3 pr-3 text-left fs-13 font-medium text-757575 border-r-0 border-none w-[216px] min-w-[216px] flex justify-between items-center">Plan <img src="images/down-arrow.png" class="inline-block ml-2 float-right" alt="arrow"></th>
+								              		</tr>
+								            	</thead>
+									            <tbody class="divide-y divide-gray-100 bg-white">
+									              	<tr class="align-top flex h-[84px]">
+									                	<td class="whitespace-nowrap align-top py-3 pl-3 pr-3 fs-13 font-medium leading-4 text-616161 w-[280px] min-w-[280px] text-616161">Invoice #1234
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		<span class="py-0.5 px-2.5 text-xs font-medium leading-3 rounded-full text-209d7d bg-d5f7eb">Paid</span>
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		06.01.2022 
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		$2054
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left align-top border-r-0 border-none w-[121px] min-w-[121px]">Basic Plan</td>
+									              	</tr>
+									              	<tr class="align-top flex h-[84px]">
+									                	<td class="whitespace-nowrap align-top py-3 pl-3 pr-3 fs-13 font-medium leading-4 text-616161 w-[280px] min-w-[280px] text-616161">Invoice #1234
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		<span class="py-0.5 px-2.5 text-xs font-medium leading-3 rounded-full text-209d7d bg-d5f7eb">Paid</span>
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		06.01.2022 
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		$2054
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left align-top border-r-0 border-none w-[121px] min-w-[121px]">Basic Plan</td>
+									              	</tr>
+									              	<tr class="align-top flex h-[84px]">
+									                	<td class="whitespace-nowrap align-top py-3 pl-3 pr-3 fs-13 font-medium leading-4 text-616161 w-[280px] min-w-[280px] text-616161">Invoice #1234
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		<span class="py-0.5 px-2.5 text-xs font-medium leading-3 rounded-full text-209d7d bg-d5f7eb">Paid</span>
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		06.01.2022 
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left border-r-0 border-none w-[216px] min-w-[216px]">
+									                		$2054
+									                	</td>
+									                	<td class="whitespace-nowrap py-3 pl-3 pr-3 fs-13 text-616161 text-left align-top border-r-0 border-none w-[121px] min-w-[121px]">Basic Plan</td>
+									              	</tr>
+
+									              	<!-- More people... -->
+									            </tbody>
+								          	</table>
+								        </div>
+						      		</div>
+						    	</div>
+						  	</div>
+							<div class="flex justify-center sm:justify-end items-center px-5 bg-white border-t rounded-b-lg py-5">
+								<a class="w-6 h-6 mr-2.5 rounded flex justify-center items-center border border-bdbdbd page-active" href="#/">
+									<img src="images/prev.png">
+								</a>
+								<a class="w-6 h-6 mr-2.5 rounded flex justify-center items-center border text-sm font-medium leading-3 focus:text-white text-bdbdbd border-bdbdbd page-active" href="#/">
+									1
+								</a>
+								<a class="w-6 h-6 mr-2.5 rounded flex justify-center items-center border text-sm font-medium leading-3 focus:text-white text-bdbdbd border-bdbdbd page-active" href="#/">
+									2
+								</a>
+								<a class="w-6 h-6 mr-2.5 rounded flex justify-center items-center border text-sm font-medium leading-3 focus:text-white text-bdbdbd border-bdbdbd page-active" href="#/">
+									3
+								</a>
+								<a class="w-6 h-6 mr-2.5 rounded flex justify-center items-center border text-sm font-medium leading-3 focus:text-white text-bdbdbd border-bdbdbd page-active" href="#/">
+									...
+								</a>
+								<a class="w-6 h-6 rounded flex justify-center items-center border border-bdbdbd page-active" href="#/">
+									<img src="images/next.png">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            function sidebarmob() {
+                   let element = document.getElementById("sidebar-mob");
+                   element.classList.toggle("sidebar-mob-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hidesidebarmob() {
+                let element = document.getElementById("sidebar-mob");
+                 element.classList.remove("sidebar-mob-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+			$('.tabs-btn').on('click', function(){
+  			$('.tabs-btn').removeClass('selected');
+    		$(this).addClass('selected');
+			});
+        </script>
+        <script src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>
+	</body>
+	</html>
+	

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html dir="ltr">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<script src="../css/tailwind-latest.min.css"></script>
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="css/header-css/header.css">
+		<link rel="stylesheet" href="css/sidebar-css/sidebar.css">
+		<link rel="stylesheet" type="text/css" href="css/create-blasts/create-blasts.css">
+	</head>
+	<body class="bg-f6f7f9">
+		<div class="flex w-full">
+			<div id="wrapper" onclick="hidesidebarmob()"></div>
+			<div id="sidebar-mob" class="h-screen lg-w-220 sm:w-16 bg-fafafa mob-sidebar boxshadow-eeeeee font-inter fixed overflow-auto">
+				<div class="px-5 py-2 border-b lg:block sm:hidden">
+					<div class="w-40 pl-0.5">
+						<img src="sidebar-images/logo.png" />
+					</div>
+				</div>
+				<div class="flex flex-col justify-between h-full px-2.5 pt-4 pb-6 bg-fafafa">
+					<div>
+						<form>
+							<div class="lg:border sm:border-0 border rounded lg:bg-white sm:bg-transparent bg-white flex justify-between items-center pl-3 pr-3.5 py-2 relative">
+								<img class="absolute left-3 w-3 h-3" src="sidebar-images/search.png" />
+								<input class="fs-13 font-normal leading-3 lg:block sm:hidden text-757575 ml-5 h-5 w-3/4 p-2" type="text" name="search" placeholder="Jump to">
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xs.png" />
+								</span>
+							</div>
+						</form>
+						<div class="border-b pb-2">
+							<a href="../dashboard-blast/index.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-6 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/box.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/box-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Dashboard</span>
+								</div>
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xd.png" />
+								</span>
+							</a>
+						</div>
+						<a href="../index.html" class="flex justify-between items-center rounded sidebar-dropdown py-2.5 px-3.5 mt-2.5 group focus:bg-[#3575d5]">
+							<div class="flex items-center">
+								<span>
+									<img class="group-focus:hidden" src="sidebar-images/union.png" />
+									<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/union-white.png" />
+								</span>
+								<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Campaigns</span>
+							</div>
+							<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+								<img class="mx-auto" src="sidebar-images/xd.png" />
+							</span>
+						</a>
+						<div class="hidden lg:block">
+							<a href="../campaign-blasts/index.html" class="flex justify-between items-center py-3 px-3.5 mt-2 group focus:bg-[#3575d5] rounded">
+								<div class="flex items-center">
+									<span class="w-4 h-4">
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 pl-3 sidebar-links group-focus:text-white">Configuration Edit</span>
+								</div>
+							</a>
+							<a href="../campaign-blasts/content-view.html" class="flex justify-between items-center py-3 px-3.5 group focus:bg-[#3575d5] rounded">
+								<div class="flex items-center">
+									<span class="w-4 h-4">
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 pl-3 sidebar-links group-focus:text-white">Configuration View</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="../workflow/index.html" class="flex justify-between items-center rounded py-3 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/share-black.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/share.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 text-616161 lg:block sm:hidden pl-3 sidebar-links group-focus:text-white">WorkFlows</span>
+								</div>
+								<span class="w-6 h-4 justify-center items-center lg:flex sm:hidden rounded-sm bg-e0e0e0">
+									<img class="mx-auto" src="sidebar-images/xf.png" />
+								</span>
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/mail.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/mail-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Email Templates</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/notification.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/notification-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Pop-Ups</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="../lists-segments/lists.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="group-focus:hidden w-4 h-4" src="sidebar-images/target.png" />
+										<img class="w-4 h-4 group-focus:block hidden" src="sidebar-images/target-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">List & Segments</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="../subscribers-profile/kamron-profile-form.html" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/user.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/user-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Profiles</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="#/" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 sidebar-items group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/cloud.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/cloud-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Integrations</span>
+								</div>
+							</a>
+						</div>
+						<div class="border-b pb-2">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/rss.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/data-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Data Feeds</span>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div>
+						<div class="">
+							<a href="../account-setting/account-setting-profile-edit.html" class="flex justify-between items-center rounded py-2.5 px-3.5 mt-3 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/setting.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/setting-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Settings</span>
+								</div>
+							</a>
+						</div>
+						<div class="">
+							<a href="#" class="flex justify-between items-center rounded py-2.5 px-3.5 group focus:bg-[#3575d5]">
+								<div class="flex items-center">
+									<span>
+										<img class="w-4 h-4 group-focus:hidden" src="sidebar-images/info.png" />
+										<img class="w-4 h-4 group-focus:block hidden"  src="sidebar-images/info-white.png" />
+									</span>
+									<span class="fs-13 font-medium leading-3 lg:block sm:hidden text-616161 pl-3 sidebar-links group-focus:text-white">Get Help</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="body-content-right">
+				<header class="bg-white border-b md:px-8 px-4">
+					<div class="flex justify-between items-center w-full">
+						<form class="w-10/12 py-2.5 sm:block flex items-center">
+							<div class="sm:hidden mr-2">
+					            <button type="button" class="w-6 h-6"  onclick="sidebarmob()">
+					                <img src="sidebar-images/menu-bars.png">
+					            </button>
+					        </div>
+							<div class="flex items-center  relative">
+								<img class="absolute left-0" src="sidebar-images/search.png" />
+								<input class="text-sm font-normal leading-3 py-2.5 px-3 sm:ml-6 ml-1.5 w-full text-757575" type="text" name="search" placeholder="Search">
+							</div>
+						</form>
+						<div class="flex items-center py-4 border-l">
+							<button class="w-6 h-6 ml-5">
+								<img src="sidebar-images/notification-bell.png" />
+							</button>
+							<button class="w-6 h-6 sm:ml-9 ml-5">
+								<img src="sidebar-images/activity.png" />
+							</button>
+							<button class="w-6 h-6 sm:ml-9 ml-5">
+								<img src="sidebar-images/profile.png" />
+							</button>
+						</div>
+					</div>
+				</header>
+				<div class="md:px-6 px-3 pt-5 pb-28 font-inter bg-f6f7f9">
+					<div class="md:px-1.5">
+						<div class="w-full max-w-md mx-auto flex justify-center items-center">
+							<div class="w-7 h-7 rounded-full text-ryzeoBlue flex justify-center items-center border border-ryzeo-blue text-base font-normal leading-6">1</div>
+							<div class="h-0.5 sm:w-48 w-24 border-b-1 bg-[#cfcfcf]"></div>
+							<div class="w-7 h-7 rounded-full flex justify-center items-center border border-[#cfcfcf] text-[#cfcfcf] text-base font-normal leading-6">2</div>
+							<div class="h-0.5 sm:w-48 w-24 border-b-1 bg-[#cfcfcf]"></div>
+							<div class="w-7 h-7 rounded-full flex justify-center items-center border border-[#cfcfcf] text-[#cfcfcf] text-base font-normal leading-6">3</div>
+						</div>
+						<div class="mt-8">
+							<h1 class="sm:text-xl text-lg font-medium leading-7">
+								<span class="text-757575">Step 1a:</span>
+								<span class="text-ryzeoBlue">How should it be built?</span>
+							</h1>
+						</div>
+						<div class="bg-white sm:px-5 px-3 py-6 sm:mt-6 mt-4 rounded-lg boxShadow">
+							<form>
+								<div>
+									<label class="radio-btn block pl-7 relative fs-13 font-normal leading-3 text-616161">Use Your Own HTM
+									 	<input class="absolute opacity-0" type="radio" name="radio">
+									 	<span class="checkmark absolute top-0 left-0 w-[18px] h-[18px] rounded-full border border-ryzeo-blue bg-white"></span>
+									</label>
+									<p class="pl-7 text-sm font-normal leading-5 text-616161 mt-1">Copy-paste, Import from the web, or upload from a file</p>
+									<div>
+										<div class="ml-7 p-2 flex items-center mt-3 md:w-8/12 bg-f6f7f9">
+											<img class="w-5" src="images/copy.png" />
+											<a class="text-xs font-medium leading-3 ml-2 text-ryzeoBlue" href="#/">Copy/Paste HTML</a>
+										</div>
+										<div class="md:w-8/12 ml-7 border bg-white rounded mt-4">
+											<div class="">
+												<div class=" bg-gray-50 py-2.5 px-3">
+													<div class="flex md:justify-start justify-between items-center">
+														<a class="md:w-auto flex items-center text-xs font-medium text-ryzeoBlue mr-2"  href="#">
+															<span class="w-3 h-3 flex justify-center items-center inline-block rounded-full ryzeo-blue text-white text-xs font-bold mr-1">+</span>
+															<span class="underline w-24">Add Mail Merge</span>
+														</a>
+														<div class="md:block hidden w-56 relative h-8 border border-bdbdbd rounded">
+															<select class="text-[13px] font-medium leading-3 text-bdbdbd absolute w-full h-full rounded pl-4 focus:outline-0">
+															<optgroup label="Subscriber">
+																<option value="email">E-mail Address</option>
+																<option value="first-name">First Name</option>
+																<option value="last-name">Last Name</option>
+																<option value="company">Company</option>
+																<option value="address1">Address 1</option>
+																<option value="address2">Address 2</option>
+																<option value="city">City</option>
+																<option value="stateprovince">State/Province</option>
+																<option value="postan-code">Postal Code</option>
+																<option value="country">Country</option>
+																<option value="phone-number">Phone Number</option>
+																<option value="conset-language">Conset Language</option>
+																<option value="discont-rate">Discount Rate</option>
+																<option value="discount-coupon">Discount Coupon</option>
+																<option value="discount-grid-cell">Discount Grid Cell</option>
+															</optgroup>
+															<optgroup label="Links">
+																<option value="subscribe">Subscribe</option>
+																<option value="unsubscribe">Unsubscribe / Edit Profile</option>
+																<option value="share">Share</option>
+																<option value="browse">Browse Online</option>
+															</optgroup>
+															<optgroup label="System">
+																<option value="account-id">Account Id</option>
+																<option value="blast-id">Blast Id</option>
+																<option value="mailing-address-1">Address 1</option>
+																<option value="mailing-address-2">Address 2</option>
+																<option value="city">City</option>
+																<option value="state">State</option>
+																<option value="postal-code">Postal Code</option>
+																<option value="country">Country</option>
+															</optgroup>
+															</select>
+															<img class="absolute right-1.5 top-2" src="images/down-arrow.png" />
+														</div>
+														<a class="md:w-auto flex md:justify-start justify-end items-center text-xs font-medium text-ryzeoBlue xl:ml-20 md:ml-8"  href="#">
+															<span class="w-4 h-4 mr-2">
+																<img src="images/gallery.png" />
+															</span>
+															<span class="underline w-16">Add Image</span>
+														</a>
+													</div>
+													<div class="md:hidden w-full relative h-8 border border-bdbdbd rounded mt-2">
+															<select class="text-[13px] font-medium leading-3 text-bdbdbd absolute w-full h-full rounded pl-4 focus:outline-0">
+															<optgroup label="Subscriber">
+																<option value="email">E-mail Address</option>
+																<option value="first-name">First Name</option>
+																<option value="last-name">Last Name</option>
+																<option value="company">Company</option>
+																<option value="address1">Address 1</option>
+																<option value="address2">Address 2</option>
+																<option value="city">City</option>
+																<option value="stateprovince">State/Province</option>
+																<option value="postan-code">Postal Code</option>
+																<option value="country">Country</option>
+																<option value="phone-number">Phone Number</option>
+																<option value="conset-language">Conset Language</option>
+																<option value="discont-rate">Discount Rate</option>
+																<option value="discount-coupon">Discount Coupon</option>
+																<option value="discount-grid-cell">Discount Grid Cell</option>
+															</optgroup>
+															<optgroup label="Links">
+																<option value="subscribe">Subscribe</option>
+																<option value="unsubscribe">Unsubscribe / Edit Profile</option>
+																<option value="share">Share</option>
+																<option value="browse">Browse Online</option>
+															</optgroup>
+															<optgroup label="System">
+																<option value="account-id">Account Id</option>
+																<option value="blast-id">Blast Id</option>
+																<option value="mailing-address-1">Address 1</option>
+																<option value="mailing-address-2">Address 2</option>
+																<option value="city">City</option>
+																<option value="state">State</option>
+																<option value="postal-code">Postal Code</option>
+																<option value="country">Country</option>
+															</optgroup>
+															</select>
+															<img class="absolute right-1.5 top-2" src="images/down-arrow.png" />
+													</div>
+												</div>
+												<textarea class="w-full p-3 focus:outline-0" rows="7"></textarea>
+												<div class="text-right bg-gray-50 py-2 px-3">
+													<button class="text-[13px] font-medium leading-5 text-white flex items-center ml-auto rounded py-1.5 px-5 font-inter ryeo-blue-bg">Submit</button>
+												</div>
+											</div>
+										</div>
+										<div class="ml-7 p-2 flex items-center mt-3 md:w-8/12 bg-f6f7f9">
+											<img class="w-5" src="images/copy.png" />
+											<a class="text-xs font-medium leading-3 ml-2 text-ryzeoBlue" href="#/">Import from Web page</a>
+										</div>
+										<div class="md:w-8/12 ml-7 mt-4 flex items-center">
+											<span class="mr-3">
+												<img src="images/glob.png" />
+											</span>
+											<input class="border rounded sm:w-6/12 w-8/12 h-8 py-1 px-2 text-base font-medium leading-4" type="text" name="url" placeholder="http://">
+											<button type="submit" class="py-1 px-3 h-8 sm:ml-6 ml-3 rounded ryeo-blue-bg text-[13px] font-normal leading-4 text-white">
+												Fetch
+											</button>
+										</div>
+										<div class="ml-7 p-2 flex items-center mt-3 md:w-8/12 bg-f6f7f9">
+											<img class="w-5" src="images/upload.png" />
+											<a class="text-xs font-medium leading-3 ml-2 text-ryzeoBlue" href="#/">Upload from file</a>
+										</div>
+										<div class="md:w-8/12 ml-7 mt-4 pt-6 pb-8 flex justify-center items-center relative border border-dashed border-ryzeo-blue rounded bg-[#fbfcfd]">
+											<div class="w-[194px] mx-auto">
+												<div>
+													<img class="mx-auto" src="images/upload2.png" />
+												</div>
+												<p class="text-sm font-medium leading-4 text-212121 mt-6 text-center">Drag and drop files to upload or</p>
+												<div class="px-0.5">
+													<button class="text-[13px] font-medium leading-4 text-white rounded flex items-center justify-center py-3 px-2 w-full mt-2.5 ryeo-blue-bg">
+														<img src="images/plus.png" />
+														<span class="ml-3">Select files to upload</span>
+													</button>
+												</div>
+											</div>
+											<input class="absolute top-0 w-full h-full opacity-0 cursor-pointer" type="file" name="upload" />
+										</div>
+									</div>
+								</div>
+								<div class="mt-5">
+									<label class="radio-btn block pl-7 relative fs-13 font-normal leading-3 text-616161">Use a Custom Template
+									 	<input class="absolute opacity-0" type="radio" name="radio">
+									 	<span class="checkmark absolute top-0 left-0 w-[18px] h-[18px] rounded-full border border-ryzeo-blue bg-white"></span>
+									</label>
+									<p class="pl-7 text-sm font-normal leading-5 text-616161 mt-1">Use a Template Created For Your Account</p>
+									<div class="ml-7 p-2 flex items-center mt-3 md:w-8/12 bg-f6f7f9">
+										<div class="flex items-center w-full">
+											<div class="w-56 relative h-8 border border-bdbdbd rounded">
+												<select class="text-[13px] font-medium leading-3 text-bdbdbd absolute w-full h-full rounded pl-4 focus:outline-0">
+													<option value>- Pick One -</option>
+													<option value="1">Welcome 1_4.zip</option>
+													<option value="2">Product 1_4.zip</option>
+												</select>
+												<img class="absolute right-1.5 top-2" src="images/down-arrow.png" />
+											</div>
+											<button type="submit" class="py-1 px-3 h-8 ml-6 rounded ryeo-blue-bg text-[13px] font-normal leading-4 text-white">
+												Submit
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="mt-5">
+									<label class="radio-btn block pl-7 relative fs-13 font-normal leading-3 text-616161">Use a Template
+									 	<input class="absolute opacity-0" type="radio" name="radio">
+									 	<span class="checkmark absolute top-0 left-0 w-[18px] h-[18px] rounded-full border border-ryzeo-blue bg-white"></span>
+									</label>
+									<p class="pl-7 text-sm font-normal leading-5 text-616161 mt-1">Customize a professionally designed e-mail template</p>
+									<div class="ml-7 p-2 flex items-center mt-3 md:w-8/12 bg-f6f7f9">
+										<div class="sm:flex items-center w-full">
+											<label class="text-sm font-normal leading-4 text-212121 mr-2">Filter by Category:</label>
+											<div class="sm:w-56 relative h-8 border border-bdbdbd sm:mt-0 mt-2 rounded">
+												<select class="text-[13px] font-medium leading-3 text-bdbdbd absolute w-full h-full rounded pl-4 focus:outline-0">
+													<option value>- Featured -</option>
+													<option value="1">Basic Layout Narrow</option>
+													<option value="2">E-commerc</option>
+												</select>
+												<img class="absolute right-1.5 top-2" src="images/down-arrow.png" />
+											</div>
+										</div>
+									</div>
+									<div class="mt-4 ml-7 w-48 mr-auto pl-4">
+										<div class="border p-0.5">
+											<img src="images/thumbnail.gif" />
+										</div>
+										<div class="flex justify-center mt-2">
+											<label class="text-sm font-normal leading-4 text-212121" for="build-own">Build Your Own</label>
+										</div>
+									</div>
+									<div class="py-1.5 px-2 bg-f7f4ff rounded mt-4">
+										<p class="text-xs font-normal leading-5 text-616161">Showing <strong>1-1</strong> of <strong>1</strong></p>
+									</div>
+									<div class="text-right mt-3">
+										<button onclick="location.href='setup-blast.html'" class="text-[13px] font-medium leading-5 text-white flex items-center ml-auto rounded py-1.5 px-5 font-inter ryeo-blue-bg" type="button">Continue</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+            var coll = document.getElementsByClassName("sidebar-dropdown");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+              coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                  content.style.maxHeight = null;
+                } else {
+                  content.style.maxHeight = content.scrollHeight + "px";
+                } 
+              });
+            }
+        </script>
+        <script>
+            function sidebarmob() {
+                   let element = document.getElementById("sidebar-mob");
+                   element.classList.toggle("sidebar-mob-style");
+
+
+                  let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.add("wrapperStyle");
+                
+            }
+
+            function hidesidebarmob() {
+                let element = document.getElementById("sidebar-mob");
+                 element.classList.remove("sidebar-mob-style");
+
+                 let wrapperID = document.getElementById("wrapper");
+                  wrapperID.classList.remove("wrapperStyle");
+            }
+
+        </script>
+        <script src="https://unpkg.com/alpinejs@3.9.1/dist/cdn.min.js"></script>
+	</body>
+</html>
