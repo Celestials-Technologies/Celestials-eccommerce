@@ -1,12 +1,14 @@
-import React from "react";
-import "./App.css";
+import './App.css';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
 
 function App() {
-    return(
-      <div className="text-3xl font-bold underline">
-        <h1> Hello, World! </h1>
-      </div>
-    );
+  return (
+    <div className="App">
+      <Header />
+      <Sidebar />
+    </div>
+  );
 }
 
 export default App;
