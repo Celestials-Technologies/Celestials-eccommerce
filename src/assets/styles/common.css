@@ -1,0 +1,134 @@
+@font-face {
+	font-family: gilroy-bold;
+	src: url(../fonts/gilroy/Gilroy-Bold.ttf);
+}
+
+@font-face {
+	font-family: gilroy-light;
+	src: url(../fonts/gilroy/Gilroy-Light.ttf);
+}
+
+@font-face {
+	font-family: gilroy-medium;
+	src: url(../fonts/gilroy/Gilroy-Medium.ttf);
+}
+
+@font-face {
+	font-family: gilroy-regular;
+	src: url(../fonts/gilroy/Gilroy-Regular.ttf);
+}
+
+@font-face {
+	font-family: gilroy-semibold;
+	src: url(../fonts/gilroy/Gilroy-Semibold.ttf);
+}
+
+.font-gilroySemibold {
+	font-family: gilroy-semibold, sans-serif;
+}
+
+.font-gilroyRegular {
+	font-family: gilroy-regular, sans-serif;
+}
+
+.font-gilroyLight {
+	font-family: gilroy-light, sans-serif;
+}
+
+.font-gilroyMedium {
+	font-family: gilroy-medium, sans-serif;
+}
+
+
+.font-gilroyBold {
+	font-family: gilroy-bold, sans-serif;
+}
+
+.font-inter {
+	font-family: 'Inter', sans-serif;
+}
+
+.border-e0e0e0 {
+	border-color: #e0e0e0;
+}
+
+.text-212121 {
+	color: #212121;
+}
+
+.text-757575 {
+	color: #757575;
+}
+
+.ryeo-blue-bg {
+	background-color: #3575d5;
+}
+
+.fs-13 {
+	font-size: 13px;
+}
+
+.fs-15 {
+	font-size: 15px;
+}
+
+.text-616161 {
+	color: #616161;
+}
+
+.text-bdbdbd {
+	color: #bdbdbd;
+}
+
+button:focus {
+	outline: none;
+}
+
+.tabs-btn:focus {
+	color: #3575d5;
+	box-shadow: inset 0px -3px 0px #3575D5;
+}
+
+.border-eeeeee {
+	border-color: #eeeeee;
+}
+
+.text-18a558 {
+	color: #18A558
+}
+
+.bg-2ea1f9 {
+	background-color: #2ea1f9;
+}
+
+.bg-8fdbc0 {
+	background-color: #8fdbc0;
+}
+
+.bg-fbb846 {
+	background-color: #fbb846;
+}
+
+.bg-a292d8 {
+	background-color: #a292d8;
+}
+
+.fs-28 {
+	font-size: 28px;
+}
+
+.text-424242 {
+	color: #424242;
+}
+
+.text-fd445f {
+	color: #fd445f;
+}
+
+.border-bdbdbd {
+	border-color: #bdbdbd;
+}
+
+.fs-11 {
+	font-size: 11px;
+}
