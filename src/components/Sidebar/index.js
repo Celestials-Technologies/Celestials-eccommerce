@@ -29,7 +29,7 @@ import HelpWhite from '../../assets/svg-images/help-white.svg';
 
 const Sidebar = () => {
     return (
-        <div id="sidebar-mob" className="h-screen lg-w-220 sm:w-16 bg-fafafa mob-sidebar boxshadow-eeeeee font-inter fixed overflow-auto">
+        <div id="sidebar-mob" className="h-screen lg-w-220 sm:w-16 bg-fafafa mob-sidebar boxshadow-eeeeee font-inter fixed overflow-auto top-0">
             <div className="px-5 py-2 border-b lg:block sm:hidden">
                 <div className="w-40 pl-0.5">
                     <img src={Logo} alt="logo" />

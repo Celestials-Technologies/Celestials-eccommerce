@@ -4,17 +4,27 @@ import Search from '../../assets/images/search.png';
 import NotificationBell from '../../assets/images/notification-bell.png';
 import Acitivity from '../../assets/images/activity.png';
 import Profile from '../../assets/images/profile.png';
+import Backdrop from '../Backdrop';
+import Sidebar from '../Sidebar';
 
 const Header = () => {
+    const sidebarClickHandler = () => {
+        console.log('Yellow');
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('You clicked form submit');
+    }
     return (
         <>
             <div class="flex w-full">
                 <div class="body-content-right">
-                    <header class="bg-white border-b md:px-8 px-4">
+                    <header class="bg-white border-b md:px-8 px-4 h-14">
                         <div class="flex justify-between items-center w-full">
-                            <form class="w-10/12 py-2.5 sm:block flex items-center">
+                            <form class="w-10/12 py-2.5 sm:block flex items-center" onSubmit={handleSubmit}>
                                 <div class="sm:hidden mr-4">
-                                    <button class="w-6 h-6"  onclick="sidebarmob()">
+                                    <button class="w-6 h-6" onClick={sidebarClickHandler}>
                                         <img src={MenuBars} alt="Menu Bars" />
                                     </button>
                                 </div>
@@ -36,6 +46,7 @@ const Header = () => {
                             </div>
                         </div>
                     </header>
+                    <Backdrop />
                 </div>
             </div>
         </>
