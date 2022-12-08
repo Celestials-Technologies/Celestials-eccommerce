@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import '../../assets/styles/header.css';
 import MenuBars from '../../assets/images/menu-bars.png';
 import Search from '../../assets/images/search.png';
@@ -7,9 +8,18 @@ import Profile from '../../assets/images/profile.png';
 import Backdrop from '../Backdrop';
 import Sidebar from '../Sidebar';
 
-const Header = () => {
-    const sidebarClickHandler = () => {
+const Header = ({setSidebarOpen}) => {
+    const [backdropEnabled, setBackdropEnabled] = useState(false);
+
+    const sidebarClickHandler = (mode) => {
         console.log('Yellow');
+        setBackdropEnabled(true);
+        setSidebarOpen(mode);
+    }
+
+    const removeBackdropHandler = () => {
+        setBackdropEnabled(false);
+        console.log('Blue vs Green');
     }
 
     const handleSubmit = (e) => {
@@ -22,12 +32,12 @@ const Header = () => {
                 <div class="body-content-right">
                     <header class="bg-white border-b md:px-8 px-4 h-14">
                         <div class="flex justify-between items-center w-full">
+                            <div class="sm:hidden mr-4">
+                                <button class="w-6 h-6" onClick={sidebarClickHandler}>
+                                    <img src={MenuBars} alt="Menu Bars" />
+                                </button>
+                            </div>
                             <form class="w-10/12 py-2.5 sm:block flex items-center" onSubmit={handleSubmit}>
-                                <div class="sm:hidden mr-4">
-                                    <button class="w-6 h-6" onClick={sidebarClickHandler}>
-                                        <img src={MenuBars} alt="Menu Bars" />
-                                    </button>
-                                </div>
                                 <div class="flex items-center  relative">
                                     <img class="absolute left-0" src={Search} alt="search" />
                                     <input class="text-sm font-normal leading-3 py-2.5 px-3 ml-6 w-full text-757575" type="text" name="search" placeholder="Search" />
@@ -46,7 +56,7 @@ const Header = () => {
                             </div>
                         </div>
                     </header>
-                    <Backdrop />
+                    {backdropEnabled && <Backdrop />}
                 </div>
             </div>
         </>
