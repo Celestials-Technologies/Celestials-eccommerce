@@ -109,6 +109,10 @@ input:focus {
 		width: 220px;
  	}
 
+	.mob-sidebar.mob-navigation-active {
+		margin-left: 0;
+	}
+
  	.body-content-right {
 		width: 100%;
 		margin-left: 0;

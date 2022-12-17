@@ -26,10 +26,9 @@ import SettingWhite from '../../assets/svg-images/setting-white.svg';
 import Help from '../../assets/svg-images/help.svg';
 import HelpWhite from '../../assets/svg-images/help-white.svg';
 
-
 const Sidebar = ({sidebarOpen}) => {
     return (
-        <div id="sidebar-mob" className={`${sidebarOpen ? "yellow" : "hello"}`}>
+        <div id="sidebar-mob" className={`h-screen lg-w-220 sm:w-16 bg-fafafa mob-sidebar boxshadow-eeeeee font-inter fixed overflow-auto top-0 left-0 ${sidebarOpen ? "mob-navigation-active" : "mob-navigation-inactive"}`}>
             <div className="px-5 py-2 border-b lg:block sm:hidden">
                 <div className="w-40 pl-0.5">
                     <img src={Logo} alt="logo" />

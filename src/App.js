@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import './App.css';
-// import './assets/styles/common.css';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = useState('')
+  const [sidebarOpen, setSidebarOpen] = useState('');
+  
   return (
     <div className="App">
       <Header setSidebarOpen={setSidebarOpen} />
